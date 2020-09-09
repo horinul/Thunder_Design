@@ -1,6 +1,6 @@
-import testA from './testA'
+import THButton from './Button'
 export default {
     install(Vue) {
-        Vue.use(testA);
+        Vue.use(THButton);
     },
 }

@@ -29,6 +29,8 @@ const devConfig = {
             entry: 'src/main.js',
             template: 'public/index.html',
             filename: 'index.html',
+            chunks: ['chunks-manifest', 'vendor'],
+            chunksSortMode: 'manual'
         },
     },
     configureWebpack: {
@@ -73,7 +75,7 @@ const buildConfig = {
             })
     },
     outputDir: 'lib',
-    productionSourceMap: false,
+    productionSourceMap: true,
     configureWebpack: {
         entry: {
             ...getEntries('packages'),
@@ -83,12 +85,12 @@ const buildConfig = {
             libraryTarget: 'commonjs2',
         }
     },
-    css: {
-        sourceMap: true,
-        extract: {
-            filename: 'style/[name].css' //在lib文件夹中建立style文件夹中，生成对应的css文件。
-        }
-    },
+    // css: {
+    //     sourceMap: true,
+    //     extract: {
+    //         filename: 'style/[name].css' //在lib文件夹中建立style文件夹中，生成对应的css文件。
+    //     }
+    // },
     chainWebpack: config => {
         config.optimization.delete('splitChunks')
         config.plugins.delete('copy')

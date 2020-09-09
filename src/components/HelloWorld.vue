@@ -1,17 +1,17 @@
 <template>
   <div>
-    <Button icon="icon1" disabled="true" @click="test">dhakj</Button>
-    <Button size="little" icon="icon1" @click="test">dhakj</Button>
-    <Button size="large" icon="icon1">dajkdlslakdkas</Button>
+    <THButton icon="icon1" disabled="true" @click="test">dhakj</THButton>
+    <THButton size="little" icon="icon1" @click="test">dhakj</THButton>
+    <THButton size="large" icon="icon1">dajkdlslakdkas</THButton>
   </div>
 </template>
 
 <script>
-import Button from "../../packages/Button/index";
+import THButton from "../../packages/Button/index";
 export default {
   name: "HelloWorld",
   components: {
-    Button,
+    THButton,
   },
   props: {
     msg: String,

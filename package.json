@@ -1,6 +1,6 @@
 {
-  "name": "thunder-view",
-  "version": "0.1.0",
+  "name": "thunder-designs",
+  "version": "0.2.2",
   "private": false,
   "keyword": "none test",
   "description": "UI Test",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

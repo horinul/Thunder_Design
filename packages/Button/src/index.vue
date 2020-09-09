@@ -5,9 +5,9 @@
   </div>
 </template>
 <script>
-import { oneOf } from "../../utils/utils.js";
+import {oneOf} from '../../../src/utils/index'
 export default {
-  name: "Button",
+  name: "THButton",
   props: {
     type: {
       validator: (value) => {
@@ -35,10 +35,8 @@ export default {
         return oneOf(value, ["icon1", "icon2"]);
       },
       type: String,
+      default: "icon1",
     },
-  },
-  created() {
-    console.log(this.disabled);
   },
   data() {
     return {
