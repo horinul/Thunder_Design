@@ -1,13 +1,17 @@
 <template>
   <div :class="buttonStyle" @click="buttonClick">
-    <img :class="iconStyle" v-if="this.icon" :src="imgSrc" />
+    <THIcon v-if="icon" :size="size" :icon="icon" class="buttonIcon"></THIcon>
     <span :class="textStyle"><slot></slot></span>
   </div>
 </template>
 <script>
-import {oneOf} from '../../../src/utils/index'
+import { oneOf } from "../../../src/utils/index";
+import THIcon from "../../Icon";
 export default {
   name: "THButton",
+  components: {
+    THIcon,
+  },
   props: {
     type: {
       validator: (value) => {
@@ -35,12 +39,12 @@ export default {
         return oneOf(value, ["icon1", "icon2"]);
       },
       type: String,
-      default: "icon1",
+      // default: "icon1",
     },
   },
   data() {
     return {
-      imgSrc: require("../static/" + this.icon + ".png"),
+      // imgSrc: require("../static/" + this.icon + ".png"),
     };
   },
   computed: {
@@ -50,16 +54,6 @@ export default {
         "type-" + this.type,
         "size-" + this.size,
         this.disabled === "true" ? "buttonDisabled" : null,
-      ];
-    },
-    iconStyle() {
-      return [
-        "icon-" + this.icon,
-        this.size === "large"
-          ? "icon-base-large"
-          : this.size === "little"
-          ? "icon-base-little"
-          : null,
       ];
     },
     textStyle() {
@@ -81,6 +75,11 @@ export default {
 </script>
 <style lang="less" scoped>
 @import url("../../../src/css/index.css");
+.buttonIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .buttonBase {
   cursor: pointer;
   text-align: center;
@@ -95,12 +94,6 @@ export default {
 
 .buttonText {
   margin-left: 30px;
-}
-.type-blue {
-  background-color: #66ccff;
-}
-.type-green {
-  background-color: #39c5bb;
 }
 .buttonDisabled {
   background-color: #4169e1;
@@ -117,15 +110,6 @@ export default {
 .size-little {
   font-size: 12px;
   padding: 4px 8px;
-}
-.icon-icon1 {
-  border: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 26px;
-  background-size: 32px 26px;
 }
 .icon-base-large {
   width: 40px;
