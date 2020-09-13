@@ -231,8 +231,8 @@ textarea::-ms-input-placeholder {
 .inputIcon-increase {
   position: absolute;
   z-index: 500;
-  margin-top: 3px;
-  margin-left: 3px;
+  margin-top: 4px;
+  margin-left: 4px;
 }
 .inputAddIcon-default {
   position: relative;
@@ -248,7 +248,7 @@ textarea::-ms-input-placeholder {
 }
 .inputAddIcon-increase {
   position: relative;
-  padding: 0 0.5em 0 62px;
+  padding: 0 0.5em 0 64px;
 }
 .default-size-input {
   height: 40px;

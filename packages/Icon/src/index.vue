@@ -43,21 +43,12 @@ export default {
   },
   data() {
     return {
-      imgSrc: require("../static/" + this.icon + ".png"),
+      imgSrc: this.icon?require("../static/" + this.icon + ".png"):null,
     };
   },
   computed: {
     iconStyle() {
-      return [
-        "icon",
-        this.size === "large"
-          ? "icon-base-large"
-          : this.size === "little"
-          ? "icon-base-little"
-          : this.size === "increase"
-          ? "icon-base-increase"
-          : null,
-      ];
+      return ["icon", "icon-base-" + this.size];
     },
   },
 };
@@ -82,7 +73,7 @@ export default {
 }
 .icon-base-increase {
   width: 62px;
-  height: 55px;
-  background-size: 62px 55px;
+  height: 53px;
+  background-size: 62px 53px;
 }
 </style>
