@@ -4,14 +4,14 @@
       <THIcon
         v-if="isAddIcon"
         :icon="icon"
-        class="inputIcon"
-        size="large"
+        :class="iconStyle"
+        :size="iconSize"
       ></THIcon>
       <input
         :type="type"
         :size="size"
         :value="value"
-        :requi#483d8b="requried"
+        :required="required"
         :readonly="readonly"
         :placeholder="placeholder"
         :pattern="pattern"
@@ -20,6 +20,11 @@
         :disabled="disabled"
         :autofocus="autofocus"
         :class="textStyle"
+        @click="handleClick"
+        @blur="handleBlur"
+        @focus="handleFocus"
+        @input="handleInput"
+        @keyup.enter="handleEnter"
       />
     </div>
     <div v-else>
@@ -32,8 +37,13 @@
         :maxlength="maxlength"
         :placeholder="placeholder"
         :readonly="readonly"
-        :requied="requried"
+        :required="required"
         :wrap="wrap"
+        @click="handleClick"
+        @blur="handleBlur"
+        @focus="handleFocus"
+        @input="handleInput"
+        @keyup.enter="handleEnter"
       ></textarea>
       <span></span>
     </div>
@@ -97,7 +107,7 @@ export default {
     },
     maxlength: {
       // 字符最大长度
-      type: Number,
+      type: Number(String),
     },
     disabled: {
       type: Boolean,
@@ -123,11 +133,35 @@ export default {
     return {
       isTextarea: this.type === "textarea",
       isAddIcon: this.icon,
+      iconSize: this.size,
     };
   },
   computed: {
     textStyle() {
-      return [this.icon ? "inputAddIcon" : null];
+      return [
+        this.icon ? "inputAddIcon-"+this.size : null,
+        this.size ? this.size + "-size-input" : null,
+      ];
+    },
+    iconStyle() {
+      return [this.icon ? "inputIcon-" + this.size : null];
+    },
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit("click", event);
+    },
+    handleBlur(event) {
+      this.$emit("blur", event);
+    },
+    handleFocus(event) {
+      this.$emit("focus", event);
+    },
+    handleInput(event) {
+      this.$emit("input", event);
+    },
+    handleEnter(event) {
+      this.$emit("keyup", event);
     },
   },
 };
@@ -176,14 +210,64 @@ textarea::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #483d8b;
 }
-.inputIcon {
+.inputIcon-default {
   position: absolute;
   z-index: 500;
-    margin-top: 2px;
-    margin-left: 3px;
+  margin-top: 6px;
+  margin-left: 6px;
 }
-.inputAddIcon {
+.inputIcon-large {
+  position: absolute;
+  z-index: 500;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.inputIcon-little {
+  position: absolute;
+  z-index: 500;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+.inputIcon-increase {
+  position: absolute;
+  z-index: 500;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+.inputAddIcon-default {
   position: relative;
-  padding: 0 0.5em 0 46px;
+  padding: 0 0.5em 0 48px;
+}
+.inputAddIcon-large {
+  position: relative;
+  padding: 0 0.5em 0 55px;
+}
+.inputAddIcon-little {
+  position: relative;
+  padding: 0 0.5em 0 35px;
+}
+.inputAddIcon-increase {
+  position: relative;
+  padding: 0 0.5em 0 62px;
+}
+.default-size-input {
+  height: 40px;
+  width: 213px;
+  font-size: 15px;
+}
+.large-size-input {
+  height: 50px;
+  width: 240px;
+  font-size: 18px;
+}
+.little-size-input {
+  height: 30px;
+  width: 150px;
+  font-size: 12px;
+}
+.increase-size-input {
+  height: 60px;
+  width: 300px;
+  font-size: 20px;
 }
 </style>

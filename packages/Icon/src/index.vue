@@ -17,7 +17,7 @@ export default {
     },
     size: {
       validator: (value) => {
-        return oneOf(value, ["default", "little", "large", "Increase"]);
+        return oneOf(value, ["default", "little", "large", "increase"]);
       },
       type: String,
       default: "default",
@@ -31,6 +31,7 @@ export default {
           "icon4",
           "icon5",
           "icon6",
+          "icon7",
           "icon8",
           "icon9",
           "icon10",
@@ -65,14 +66,14 @@ export default {
 @import url("../../../src/css/index.css");
 .icon {
   border: none;
-  width: 32px;
-  height: 26px;
-  background-size: 32px 26px;
-}
-.icon-base-large {
   width: 40px;
   height: 32px;
   background-size: 40px 32px;
+}
+.icon-base-large {
+  width: 50px;
+  height: 40px;
+  background-size: 50px 40px;
 }
 .icon-base-little {
   width: 30px;
@@ -80,8 +81,8 @@ export default {
   background-size: 30px 24px;
 }
 .icon-base-increase {
-  width: 60px;
+  width: 62px;
   height: 55px;
-  background-size: 60px 55px;
+  background-size: 62px 55px;
 }
 </style>

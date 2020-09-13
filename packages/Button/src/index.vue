@@ -22,7 +22,7 @@ export default {
     },
     size: {
       validator: (value) => {
-        return oneOf(value, ["default", "little", "large"]);
+        return oneOf(value, ["default", "little", "large", "increase"]);
       },
       type: String,
       default: "default",
@@ -59,9 +59,15 @@ export default {
     textStyle() {
       return [
         this.icon
-          ? this.size === "large"
+          ? this.size === "little"
+            ? "thunder-ml-6n"
+            : this.size === "default"
             ? "thunder-ml-8n"
-            : "thunder-ml-6n"
+            : this.size === "large"
+            ? "thunder-ml-10n"
+            : this.size === "increase"
+            ? "thunder-ml-12n"
+            : null
           : null,
       ];
     },
@@ -91,7 +97,6 @@ export default {
   position: relative;
   border-radius: 4px;
 }
-
 .buttonText {
   margin-left: 30px;
 }
@@ -101,24 +106,18 @@ export default {
 }
 .size-default {
   font-size: 13px;
-  padding: 5px 10px;
+  padding: 8px 12px;
 }
 .size-large {
   font-size: 15px;
-  padding: 6px 12px;
+  padding: 10px 12px;
 }
 .size-little {
   font-size: 12px;
-  padding: 4px 8px;
+  padding: 5px 8px;
 }
-.icon-base-large {
-  width: 40px;
-  height: 32px;
-  background-size: 40px 32px;
-}
-.icon-base-little {
-  width: 30px;
-  height: 24px;
-  background-size: 30px 24px;
+.size-increase {
+  font-size: 18px;
+  padding: 14px 18px;
 }
 </style>
