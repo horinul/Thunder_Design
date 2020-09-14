@@ -26,17 +26,25 @@ export default {
       validator: (value) => {
         return oneOf(value, ["blue", "green"]);
       },
-      default:'green',
-      type:String
+      default: "green",
+      type: String,
     },
     icon: {
       type: String,
-      default:'icon1'
+      default: "icon1",
+    },
+    shadow: {
+      type: Boolean,
+      default: true,
     },
   },
   computed: {
     cardStyle() {
-      return ["transparent-" + this.type, "component"];
+      return [
+        "transparent-" + this.type,
+        "component",
+        this.shadow ? "card-shadow" : null,
+      ];
     },
   },
   data() {
@@ -44,16 +52,16 @@ export default {
       showHead: this.$slots.title,
     };
   },
-  methods:{
-      handleClick(event){
-          this.$emit('click',event)
-      }
-  }
+  methods: {
+    handleClick(event) {
+      this.$emit("click", event);
+    },
+  },
 };
 </script>
 <style lang="less" scoped>
 .component {
-  border: 1px solid #eee;
+  // border: 1px solid #eee;
   min-width: 200px;
   min-height: 200px;
   padding: 9px;
@@ -62,6 +70,14 @@ export default {
   position: relative;
   color: #20b2aa;
   width: 400px;
+}
+.card-shadow {
+  transition: all 0.2s ease-in-out;
+}
+.card-shadow:hover {
+  box-shadow: 0px 0px 5px rgba(62, 190, 211, 0.4); /*考虑浏览器兼容性*/
+  -moz-box-shadow: 0px 0px 5px rgba(62, 190, 211, 0.4);
+  -webkit-box-shadow: 0px 0px 5px rgba(26, 171, 182, 0.9);
 }
 .transparent-blue {
   background-color: rgba(57, 197, 187, 0.4);
