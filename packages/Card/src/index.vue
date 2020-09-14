@@ -75,9 +75,9 @@ export default {
   transition: all 0.2s ease-in-out;
 }
 .card-shadow:hover {
-  box-shadow: 0px 0px 5px rgba(62, 190, 211, 0.4); /*考虑浏览器兼容性*/
-  -moz-box-shadow: 0px 0px 5px rgba(62, 190, 211, 0.4);
-  -webkit-box-shadow: 0px 0px 5px rgba(26, 171, 182, 0.9);
+  box-shadow: 0px 0px 8px rgba(62, 190, 211, 0.7); /*考虑浏览器兼容性*/
+  -moz-box-shadow: 0px 0px 8px rgba(62, 190, 211, 0.7);
+  -webkit-box-shadow: 0px 0px 8px rgba(62, 190, 211, 0.7);
 }
 .transparent-blue {
   background-color: rgba(57, 197, 187, 0.4);

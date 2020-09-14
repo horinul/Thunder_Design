@@ -81,6 +81,7 @@ label {
   line-height: 0.8rem;
   text-align: left;
   position: relative;
+  cursor: pointer;
 }
 label input {
   opacity: 0;

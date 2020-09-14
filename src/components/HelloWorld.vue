@@ -1,6 +1,10 @@
 <template>
   <div class="component">
     <div>
+      <THButton @click="modalMethod">testModal</THButton>
+      <THModal :isActiveProp.sync="testModal" title="测试标题" @okClick="test" @cancelClick="test">dbajshbdjsahbhdsb</THModal>
+    </div>
+    <div>
       <THRadio value="test" id="test" name="test" @click="test">aaa</THRadio>
       <THRadio type="blue" value="aaa" id="test1" name="test">aaa</THRadio>
     </div>
@@ -17,7 +21,12 @@
       <THInput maxlength="8" type="textarea"></THInput>
       <THInput type="text" icon="icon6" @keyup.enter="test"></THInput>
       <THInput type="text" icon="icon7" size="large" autofocus></THInput>
-      <THInput type="text" icon="icon8" size="little" :disabled="true"></THInput>
+      <THInput
+        type="text"
+        icon="icon8"
+        size="little"
+        :disabled="true"
+      ></THInput>
       <THInput type="text" icon="icon9" size="increase"></THInput>
     </div>
     <div>
@@ -38,6 +47,7 @@ import THIcon from "../../packages/Icon/index";
 import THInput from "../../packages/Input/index";
 import THCard from "../../packages/Card/index";
 import THRadio from "../../packages/Radio/index";
+import THModal from "../../packages/Modal/index";
 export default {
   name: "HelloWorld",
   components: {
@@ -46,6 +56,12 @@ export default {
     THInput,
     THCard,
     THRadio,
+    THModal,
+  },
+  data() {
+    return {
+      testModal: false,
+    };
   },
   props: {
     msg: String,
@@ -54,6 +70,9 @@ export default {
     test() {
       console.log("test");
     },
+    modalMethod(){
+      this.testModal = true
+    }
   },
 };
 </script>
