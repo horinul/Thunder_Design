@@ -1,7 +1,10 @@
 <template>
 <div class="component">
     <div>
-        <THCheckbox></THCheckbox>
+        <THCheckbox :checked="testString">aaa</THCheckbox>
+        <THCheckbox v-model="checkbox1" value="bbb">bbb</THCheckbox>
+        <THCheckbox v-model="checkbox" value="ccc">ccc</THCheckbox>
+        <span> checkNames: {{checkbox}}</span>
     </div>
     <div>
         <THAlert type="blue" :showCancel="true">三年二班</THAlert>
@@ -69,6 +72,9 @@ export default {
     data() {
         return {
             testModal: false,
+            checkbox:'',
+            checkbox1:'',
+            testString:'aaa'
         };
     },
     props: {

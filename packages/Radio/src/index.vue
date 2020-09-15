@@ -1,7 +1,7 @@
 <template>
 <div>
     <label :for="id">
-        <input type="radio" :id="id" :name="name" :checked="checked" :disabled="disabled" @change="handleChange" @click="handleClick" />
+        <input type="radio" :id="id" :name="name"  :checked="checked" :disabled="disabled" @change="handleChange" @click="handleClick" />
         <i :class="spot"></i>
         <span :class="textStyle">
             <slot>

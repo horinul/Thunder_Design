@@ -121,12 +121,14 @@ export default {
 
 .alert-size-little {
     font-size: 14px;
+    width: 200px;
     min-height: 30px;
 }
 
 .alert-size-large {
     font-size: 18px;
     min-height: 50px;
+    width: 400px;
 }
 
 .cancleIcon {
