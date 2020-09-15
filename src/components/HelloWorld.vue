@@ -1,44 +1,45 @@
 <template>
-  <div class="component">
+<div class="component">
     <div>
-      <THButton @click="modalMethod">testModal</THButton>
-      <THModal :isActiveProp.sync="testModal" title="测试标题" @okClick="test" @cancelClick="test">dbajshbdjsahbhdsb</THModal>
+        <THAlert type="blue" :showCancel="true">三年二班</THAlert>
+        <THAlert icon="icon9">李子明同学</THAlert>
+        <THAlert type="blue" size="little">三年二班</THAlert>
+        <THAlert icon="icon9" size="large">李子明同学</THAlert>
     </div>
     <div>
-      <THRadio value="test" id="test" name="test" @click="test">aaa</THRadio>
-      <THRadio type="blue" value="aaa" id="test1" name="test">aaa</THRadio>
+        <THButton @click="modalMethod">testModal</THButton>
+        <THModal :isActiveProp.sync="testModal" title="测试标题" @okClick="test" @cancelClick="test" icon="icon8">dbajshbdjsahbhdsb</THModal>
     </div>
     <div>
-      <THButton icon="icon1" disabled="true" @click="test">dhakj</THButton>
-      <THButton size="little" icon="icon1" @click="test">dhakj</THButton>
-      <THButton size="large" icon="icon1">dajkdlslakdkas</THButton>
-      <THButton size="increase" icon="icon1">dajkdlslakdkas</THButton>
+        <THRadio value="test" id="test" name="test" @click="test">aaa</THRadio>
+        <THRadio type="blue" value="aaa" id="test1" name="test">aaa</THRadio>
     </div>
     <div>
-      <THIcon icon="icon8" size="increase"></THIcon>
+        <THButton icon="icon1" disabled="true" @click="test">dhakj</THButton>
+        <THButton size="little" icon="icon1" @click="test">dhakj</THButton>
+        <THButton size="large" icon="icon1">dajkdlslakdkas</THButton>
+        <THButton size="increase" icon="icon1">dajkdlslakdkas</THButton>
     </div>
     <div>
-      <THInput maxlength="8" type="textarea"></THInput>
-      <THInput type="text" icon="icon6" @keyup.enter="test"></THInput>
-      <THInput type="text" icon="icon7" size="large" autofocus></THInput>
-      <THInput
-        type="text"
-        icon="icon8"
-        size="little"
-        :disabled="true"
-      ></THInput>
-      <THInput type="text" icon="icon9" size="increase"></THInput>
+        <THIcon icon="icon8" size="increase"></THIcon>
     </div>
     <div>
-      <THCard>
-        <div slot="title">9.13</div>
-        <div slot="body">今天天气不错</div>
-      </THCard>
-      <THCard type="blue" @click="test" :shadow="false">
-        <div slot="body">今天天气不错</div>
-      </THCard>
+        <THInput maxlength="8" type="textarea"></THInput>
+        <THInput type="text" icon="icon6" @keyup.enter="test"></THInput>
+        <THInput type="text" icon="icon7" size="large" autofocus></THInput>
+        <THInput type="text" icon="icon8" size="little" :disabled="true"></THInput>
+        <THInput type="text" icon="icon9" size="increase"></THInput>
     </div>
-  </div>
+    <div>
+        <THCard>
+            <div slot="title">9.13</div>
+            <div slot="body">今天天气不错</div>
+        </THCard>
+        <THCard type="blue" @click="test" :shadow="false">
+            <div slot="body">今天天气不错</div>
+        </THCard>
+    </div>
+</div>
 </template>
 
 <script>
@@ -48,32 +49,34 @@ import THInput from "../../packages/Input/index";
 import THCard from "../../packages/Card/index";
 import THRadio from "../../packages/Radio/index";
 import THModal from "../../packages/Modal/index";
+import THAlert from "../../packages/Alert/index";
 export default {
-  name: "HelloWorld",
-  components: {
-    THButton,
-    THIcon,
-    THInput,
-    THCard,
-    THRadio,
-    THModal,
-  },
-  data() {
-    return {
-      testModal: false,
-    };
-  },
-  props: {
-    msg: String,
-  },
-  methods: {
-    test() {
-      console.log("test");
+    name: "HelloWorld",
+    components: {
+        THButton,
+        THIcon,
+        THInput,
+        THCard,
+        THRadio,
+        THModal,
+        THAlert,
     },
-    modalMethod(){
-      this.testModal = true
-    }
-  },
+    data() {
+        return {
+            testModal: false,
+        };
+    },
+    props: {
+        msg: String,
+    },
+    methods: {
+        test() {
+            console.log("test");
+        },
+        modalMethod() {
+            this.testModal = true;
+        },
+    },
 };
 </script>
 
