@@ -35,11 +35,7 @@ export default {
       default: "false",
     },
     icon: {
-      validator: (value) => {
-        return oneOf(value, ["icon1", "icon2"]);
-      },
       type: String,
-      // default: "icon1",
     },
   },
   data() {

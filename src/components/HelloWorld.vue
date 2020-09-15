@@ -1,51 +1,73 @@
 <template>
-<div class="component">
+  <div class="component">
     <div>
-        <THCheckbox :checked="testString">aaa</THCheckbox>
-        <THCheckbox v-model="checkbox1" value="bbb">bbb</THCheckbox>
-        <THCheckbox v-model="checkbox" value="ccc">ccc</THCheckbox>
-        <span> checkNames: {{checkbox}}</span>
+      <!-- <THMessage></THMessage>
+      <THMessage type="warn"></THMessage>
+      <THMessage type="success"></THMessage>
+      <THMessage type="error"></THMessage> -->
     </div>
     <div>
-        <THAlert type="blue" :showCancel="true">三年二班</THAlert>
-        <THAlert icon="icon9">李子明同学</THAlert>
-        <THAlert type="blue" size="little">三年二班</THAlert>
-        <THAlert icon="icon9" size="large">李子明同学</THAlert>
+      <THButton icon="icon6" @click="testMsg">testMessage</THButton>
     </div>
     <div>
-        <THButton @click="modalMethod">testModal</THButton>
-        <THModal :isActiveProp.sync="testModal" title="测试标题" @okClick="test" @cancelClick="test" icon="icon8">dbajshbdjsahbhdsb</THModal>
+      <THCheckboxGroup v-model="checkbox" @click="checkboxMethod">
+        <THCheckbox value="aaa">aaa</THCheckbox>
+        <THCheckbox value="bbb">bbb</THCheckbox>
+        <THCheckbox value="ccc">ccc</THCheckbox>
+      </THCheckboxGroup>
     </div>
     <div>
-        <THRadio value="test" id="test" name="test" @click="test">aaa</THRadio>
-        <THRadio type="blue" value="aaa" id="test1" name="test">aaa</THRadio>
+      <THAlert type="blue" :showCancel="true">三年二班</THAlert>
+      <THAlert icon="icon9">李子明同学</THAlert>
+      <THAlert type="blue" size="little">三年二班</THAlert>
+      <THAlert icon="icon9" size="large">李子明同学</THAlert>
     </div>
     <div>
-        <THButton icon="icon1" disabled="true" @click="test">dhakj</THButton>
-        <THButton size="little" icon="icon1" @click="test">dhakj</THButton>
-        <THButton size="large" icon="icon1">dajkdlslakdkas</THButton>
-        <THButton size="increase" icon="icon1">dajkdlslakdkas</THButton>
+      <THButton @click="modalMethod">testModal</THButton>
+      <THModal
+        :isActiveProp.sync="testModal"
+        title="测试标题"
+        @okClick="test"
+        @cancelClick="test"
+        icon="icon8"
+        >dbajshbdjsahbhdsb</THModal
+      >
     </div>
     <div>
-        <THIcon icon="icon8" size="increase"></THIcon>
+      <THRadio value="test" id="test" name="test" @click="test">aaa</THRadio>
+      <THRadio type="blue" value="aaa" id="test1" name="test">aaa</THRadio>
     </div>
     <div>
-        <THInput maxlength="8" type="textarea"></THInput>
-        <THInput type="text" icon="icon6" @keyup.enter="test"></THInput>
-        <THInput type="text" icon="icon7" size="large" autofocus></THInput>
-        <THInput type="text" icon="icon8" size="little" :disabled="true"></THInput>
-        <THInput type="text" icon="icon9" size="increase"></THInput>
+      <THButton icon="icon1" disabled="true" @click="test">dhakj</THButton>
+      <THButton size="little" icon="icon1" @click="test">dhakj</THButton>
+      <THButton size="large" icon="icon1">dajkdlslakdkas</THButton>
+      <THButton size="increase" icon="icon1">dajkdlslakdkas</THButton>
     </div>
     <div>
-        <THCard>
-            <div slot="title">9.13</div>
-            <div slot="body">今天天气不错</div>
-        </THCard>
-        <THCard type="blue" @click="test" :shadow="false">
-            <div slot="body">今天天气不错</div>
-        </THCard>
+      <THIcon icon="icon8" size="increase"></THIcon>
     </div>
-</div>
+    <div>
+      <THInput maxlength="8" type="textarea"></THInput>
+      <THInput type="text" icon="icon6" @keyup.enter="test"></THInput>
+      <THInput type="text" icon="icon7" size="large" autofocus></THInput>
+      <THInput
+        type="text"
+        icon="icon8"
+        size="little"
+        :disabled="true"
+      ></THInput>
+      <THInput type="text" icon="icon9" size="increase"></THInput>
+    </div>
+    <div>
+      <THCard>
+        <div slot="title">9.13</div>
+        <div slot="body">今天天气不错</div>
+      </THCard>
+      <THCard type="blue" @click="test" :shadow="false">
+        <div slot="body">今天天气不错</div>
+      </THCard>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -56,38 +78,53 @@ import THCard from "../../packages/Card/index";
 import THRadio from "../../packages/Radio/index";
 import THModal from "../../packages/Modal/index";
 import THAlert from "../../packages/Alert/index";
-import THCheckbox from '../../packages/Checkbox/index'
+import THCheckbox from "../../packages/Checkbox/index";
+import THCheckboxGroup from "../../packages/Checkbox/src/checkboxGroup.vue";
+// import THMessage from "../../packages/Message/index";
+// import Message from '../../packages/Message/src/main'
+/* eslint-disable */
+
 export default {
-    name: "HelloWorld",
-    components: {
-        THButton,
-        THIcon,
-        THInput,
-        THCard,
-        THRadio,
-        THModal,
-        THAlert,
-        THCheckbox
+  name: "HelloWorld",
+  components: {
+    THButton,
+    THIcon,
+    THInput,
+    THCard,
+    THRadio,
+    THModal,
+    THAlert,
+    THCheckbox,
+    THCheckboxGroup,
+    // THMessage,
+  },
+  data() {
+    return {
+      testModal: false,
+      checkbox: [],
+      checkbox1: "",
+      testString: "aaa",
+    };
+  },
+  props: {
+    msg: String,
+  },
+  methods: {
+    test() {
+      console.log("test");
     },
-    data() {
-        return {
-            testModal: false,
-            checkbox:'',
-            checkbox1:'',
-            testString:'aaa'
-        };
+    modalMethod() {
+      this.testModal = true;
     },
-    props: {
-        msg: String,
+    checkboxMethod() {
+      console.log(this.checkbox);
     },
-    methods: {
-        test() {
-            console.log("test");
-        },
-        modalMethod() {
-            this.testModal = true;
-        },
+    testMsg() {
+      // Message.success("This is a success message");
+      console.log( this.$message)
+      this.$message.success("test");
     },
+  },
 };
 </script>
 

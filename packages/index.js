@@ -5,6 +5,8 @@ import THCard from "./Card";
 import THRadio from "./Radio";
 import THModal from "./Modal";
 import THCheckbox from "./Checkbox";
+import THCheckboxGroup from './Checkbox'
+import THMessage from './Message'
 export default {
   install(Vue) {
     Vue.use(THButton);
@@ -14,5 +16,7 @@ export default {
     Vue.use(THRadio);
     Vue.use(THModal);
     Vue.use(THCheckbox);
+    Vue.use(THCheckboxGroup);
+    Vue.use(THMessage);
   },
 };
