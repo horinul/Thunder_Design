@@ -1,6 +1,9 @@
 <template>
 <div class="component">
     <div>
+        <THCheckbox></THCheckbox>
+    </div>
+    <div>
         <THAlert type="blue" :showCancel="true">三年二班</THAlert>
         <THAlert icon="icon9">李子明同学</THAlert>
         <THAlert type="blue" size="little">三年二班</THAlert>
@@ -50,6 +53,7 @@ import THCard from "../../packages/Card/index";
 import THRadio from "../../packages/Radio/index";
 import THModal from "../../packages/Modal/index";
 import THAlert from "../../packages/Alert/index";
+import THCheckbox from '../../packages/Checkbox/index'
 export default {
     name: "HelloWorld",
     components: {
@@ -60,6 +64,7 @@ export default {
         THRadio,
         THModal,
         THAlert,
+        THCheckbox
     },
     data() {
         return {
