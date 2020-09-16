@@ -126,13 +126,14 @@ export default {
     min-width: 500px;
     min-height: 135px;
     padding: 9px;
-    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, 0);
     border-radius: 10px;
     color: #20b2aa;
     width: 400px;
     z-index: 1000;
     background-color: rgb(215, 249, 250);
-    position: relative;
+    position: fixed;
     background-clip: padding-box;
     -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);

@@ -12,6 +12,7 @@ THMessage.install = function (Vue) {
     instance.$mount(document.createElement('div'));
     // 并将此div加入全局挂载点内部
     document.body.appendChild(instance.$el);
+    console.log('lll')
     //定义一个外部的变量，用于控制调用多次提示组件时，清除延时器
     let timer;
     // 通过Vue的原型注册一个方法
@@ -20,24 +21,24 @@ THMessage.install = function (Vue) {
         all_message(msg, type, duration) {
             clearTimeout(timer);
             timer = setTimeout(() => {
-                instance.visible = false;
+                instance.showMessage = false;
             }, duration);
             instance.message = msg;
-            instance.visible = true;
+            instance.showMessage = true;
             instance.type = type;
 
         },
         success(msg, duration = 2000) {
-            this.all_message(msg, 1, duration);
+            this.all_message(msg, 'success', duration);
         },
         error(msg, duration = 2000) {
-            this.all_message(msg, 2, duration);
+            this.all_message(msg, 'error', duration);
         },
         warn(msg, duration = 2000) {
-            this.all_message(msg, 3, duration)
+            this.all_message(msg, 'warn', duration)
         },
         message(msg, duration = 2000) {
-            this.all_message(msg, 4, duration)
+            this.all_message(msg, 'message', duration)
         }
     }
     //将方法挂载全局

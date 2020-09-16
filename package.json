@@ -12,6 +12,7 @@
     "lib": "vue-cli-service build --target lib --name tree-select --dest  lib packages/index.ts"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "core-js": "^3.6.5",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.6.11",
