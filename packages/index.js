@@ -7,6 +7,9 @@ import THModal from "./Modal";
 import THCheckbox from "./Checkbox";
 import THCheckboxGroup from './Checkbox'
 import THMessage from './Message'
+import THBackTop from './BackTop'
+import Tooltip from './Tooltip'
+import THTooltip from "./Tooltip";
 export default {
   install(Vue) {
     Vue.use(THButton);
@@ -18,5 +21,7 @@ export default {
     Vue.use(THCheckbox);
     Vue.use(THCheckboxGroup);
     Vue.use(THMessage);
+    Vue.use(THBackTop);
+    Vue.use(THTooltip)
   },
 };
