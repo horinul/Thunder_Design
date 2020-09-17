@@ -10,6 +10,7 @@ import THMessage from './Message'
 import THBackTop from './BackTop'
 import Tooltip from './Tooltip'
 import THTooltip from "./Tooltip";
+import THTag from './Tag';
 export default {
   install(Vue) {
     Vue.use(THButton);
@@ -22,6 +23,7 @@ export default {
     Vue.use(THCheckboxGroup);
     Vue.use(THMessage);
     Vue.use(THBackTop);
-    Vue.use(THTooltip)
+    Vue.use(THTooltip);
+    Vus.use(THTag);
   },
 };
