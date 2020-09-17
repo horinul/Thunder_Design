@@ -1,22 +1,25 @@
 <template>
-<div class="component">
+  <div class="component">
     <div>
-        <THTag>tagtag</THTag>
-        <THTag :borderShow="true">tagtag</THTag>
-        <THTag :borderShow="true" :showClose="false">tagtag</THTag>
-        <THTag color="yellow">tagtag</THTag>
-        <THTag color="red">tagtag</THTag>
-        <THTag color="blue">tagtag</THTag>
-        <THTag color="yellow" :borderShow="true">tagtag</THTag>
-        <THTag color="red" :borderShow="true">tagtag</THTag>
-        <THTag color="blue" :borderShow="true">tagtag</THTag>
+      <THSwitch></THSwitch>
     </div>
     <div>
-        <THTooptip popperText="hdkjasnjdsan" placement="right">aaa</THTooptip>
-        <THTooptip popperText="hdkjasnjdsan" placement="top">aaa</THTooptip>
-        <THTooptip placement="bottom" popperText="hdkjasnjdsan">
-            <THButton icon="icon1" @click="test">testMessage</THButton>
-        </THTooptip>
+      <THTag>tagtag</THTag>
+      <THTag :borderShow="true">tagtag</THTag>
+      <THTag :borderShow="true" :showClose="false">tagtag</THTag>
+      <THTag color="yellow">tagtag</THTag>
+      <THTag color="red">tagtag</THTag>
+      <THTag color="blue">tagtag</THTag>
+      <THTag color="yellow" :borderShow="true">tagtag</THTag>
+      <THTag color="red" :borderShow="true">tagtag</THTag>
+      <THTag color="blue" :borderShow="true">tagtag</THTag>
+    </div>
+    <div>
+      <THTooptip popperText="hdkjasnjdsan" placement="right">aaa</THTooptip>
+      <THTooptip popperText="hdkjasnjdsan" placement="top">aaa</THTooptip>
+      <THTooptip placement="bottom" popperText="hdkjasnjdsan">
+        <THButton icon="icon1" @click="test">testMessage</THButton>
+      </THTooptip>
     </div>
     <!-- <div>
       <THBackTop icon="icon6"></THBackTop>
@@ -85,7 +88,7 @@
         <div slot="body">今天天气不错</div>
       </THCard>
     </div> -->
-</div>
+  </div>
 </template>
 
 <script>
@@ -103,58 +106,62 @@ import THButton from "../../packages/Button/index";
 // import THBackTop from "../../packages/BackTop/src/index"
 import THTooptip from "../../packages/Tooltip/src/index";
 import THTag from "../../packages/Tag/src/index";
+// import THSelect from "../../packages/Select/src/index";
+import THSwitch from "../../packages/Switch/src/index";
 
 export default {
-    name: "HelloWorld",
-    components: {
-        THButton,
-        // THIcon,
-        // THInput,
-        // THCard,
-        // THRadio,
-        // THModal,
-        // THAlert,
-        // THCheckbox,
-        // THCheckboxGroup,
-        // // THMessage,
-        // THBackTop,
-        THTooptip,
-        THTag,
+  name: "HelloWorld",
+  components: {
+    THButton,
+    // THIcon,
+    // THInput,
+    // THCard,
+    // THRadio,
+    // THModal,
+    // THAlert,
+    // THCheckbox,
+    // THCheckboxGroup,
+    // // THMessage,
+    // THBackTop,
+    THTooptip,
+    THTag,
+    // THSelect,
+    THSwitch
+  },
+  data() {
+    return {
+      testModal: false,
+      checkbox: [],
+      checkbox1: "",
+      testString: "aaa",
+    };
+  },
+  props: {
+    msg: String,
+  },
+  methods: {
+    test() {
+      console.log("test");
     },
-    data() {
-        return {
-            testModal: false,
-            checkbox: [],
-            checkbox1: "",
-            testString: "aaa",
-        };
+    modalMethod() {
+      this.testModal = true;
     },
-    props: {
-        msg: String,
+    checkboxMethod() {
+      console.log(this.checkbox);
     },
-    methods: {
-        test() {
-            console.log("test");
-        },
-        modalMethod() {
-            this.testModal = true;
-        },
-        checkboxMethod() {
-            console.log(this.checkbox);
-        },
-        testMsg() {
-            this.$message.message("test");
-        },
-        testWarn() {
-            this.$message.warn("test");
-        },
-        testError() {
-            this.$message.error("test");
-        },
-        testSuccess() {
-            this.$message.success("testndsoandsakddsnajdnajk");
-        },
+    testMsg() {
+      this.$message.message("test");
     },
+    testWarn() {
+      this.$message.warn("test");
+    },
+    testError() {
+      this.$message.error("test");
+    },
+    testSuccess() {
+      this.$message.success("testndsoandsakddsnajdnajk");
+    },
+  },
 };
 </script>
 

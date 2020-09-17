@@ -11,6 +11,8 @@ import THBackTop from './BackTop'
 import Tooltip from './Tooltip'
 import THTooltip from "./Tooltip";
 import THTag from './Tag';
+import THSelect from './Select'
+import THSwitch from './THSwitch'
 export default {
   install(Vue) {
     Vue.use(THButton);
@@ -25,5 +27,7 @@ export default {
     Vue.use(THBackTop);
     Vue.use(THTooltip);
     Vus.use(THTag);
+    Vue.use(THSelect);
+    Vue.use(THSwitch);
   },
 };
