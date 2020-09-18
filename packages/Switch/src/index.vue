@@ -1,149 +1,108 @@
 <template>
-  <div class="myswipper">
-    <div class="switch-text" v-if="options">
-      <span v-if="showstatus">{{options.show}}</span>
-      <span v-else>{{options.hide}}</span>
+<div class="component">
+    <div v-if="text">
+        <span>{{ text.checked }}</span>
+        <span>{{ text.disabled }}</span>
     </div>
-    <input type="checkbox" 
-      :checked="checked"
-      :disabled="disabled"
-      @change="changeSwitch" />
-  </div>
+    <div>
+        <input type="checkbox" @change="changeSwitch" :checked="checked" :disabled="disabled" />
+    </div>
+</div>
 </template>
+
 <script>
 export default {
-  components: {
-  },
-  computed: {
-  },
-  model:{
-    prop: 'checked',
-    event: 'change'
-  },
-  data() {
-    return{
-      
-    }
-  },
-  watch: {
-  },
-  methods: {
-    changeSwitch(e){
-      console.log(e)
-      this.$emit('change',e.target.checked)
-    }
-  },
-  props: {
-    checked:{
-      type:Boolean,
-      default:false
+    name: "THSwitch",
+    model: {
+        prop: "checked",
+        event: "change",
     },
-    disabled:{
-      type:Boolean,
-      default:false
+    props: {
+        text: {
+            type: Object,
+        },
+        checked: {
+            default: false,
+            type: Boolean,
+        },
+        disabled: {
+            default: false,
+            type: Boolean,
+        },
     },
-    options:{
-      type:Object
-    }
-  },
-  destroyed() {
-  },
-}
+    methods: {
+        changeSwitch(e) {
+            console.log(e);
+            this.$emit("change", e.target.checked);
+        },
+    },
+    computed: {},
+};
 </script>
-<style lang='less' scoped>
-.myswipper{
-  display: flex;
-  align-items: center;
-  input[type=checkbox] {
-    width: 1.04rem;
-    height: .64rem;
-    -webkit-appearance: none;
-    background-color: transparent;
-    border: 0;
-    outline: 0 !important;
-    color: #d8d8d8;
-    position: relative;
-    transition: all .3s ease;
-  } 
-  input[type=checkbox]:before{
-    content: "";
-    display:block;
-    width: 1.04rem;
-    height: .64rem;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    box-sizing:border-box;  
-    border-radius: .64rem;
-    position: absolute;
-  }
-  input[type=checkbox]:after{
-    content: "";
-    display:block;
-    width: .6rem;
-    height: .6rem;
-    left:1px;
-    top:1px;
-    border: 1px solid #fff;
-    background-color: #fff;
-    box-sizing:border-box;  
-    box-shadow: 0 1px 3px rgba(0,0,0,.4);
-    border-radius: 50%;
-    position: absolute;
-    transition: all .3s ease;
-  }
-  input[type=checkbox]:disabled:before{
-    content: "";
-    display:block;
-    width: 1.04rem;
-    height: .64rem;
-    border: 1px solid #999;
-    background-color: #999;
-    box-sizing:border-box;  
-    border-radius: .64rem;
-    position: absolute;
-  }
-  input[type=checkbox]:disabled:after{
-    content: "";
-    display:block;
-    width: .6rem;
-    height: .6rem;
-    left:1px;
-    top:1px;
-    border: 1px solid #fff;
-    background-color: #fff;
-    box-sizing:border-box;  
-    box-shadow: 0 1px 3px rgba(0,0,0,.4);
-    border-radius: 50%;
-    position: absolute;
-  }
-  input[type=checkbox]:checked:before{
-    content: "";
-    display:block;
-    width: 1.04rem;
-    height: .64rem;
-    border: 1px solid #ddd;
-    background-color: #D2A47E;
-    box-sizing:border-box;  
-    border-radius: .64rem;
-    position: absolute;
-  }
-  input[type=checkbox]:checked:after{
-    content: "";
-    display:block;
-    width: .6rem;
-    height: .6rem;
-    left:100%;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    border: 1px solid #fff;
-    background-color: #fff;
-    box-sizing:border-box;  
-    box-shadow: 0 1px 3px rgba(0,0,0,.4);
-    border-radius: 50%;
-    position: absolute;
-  }
-  .switch-text{
-    margin-right: 5px;
-  }
+
+<style lang="less" scoped>
+.component {
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 10px;
+        background-color: transparent;
+        -webkit-appearance: none;
+        border: 0;
+        color: #000;
+        outline: 0 !important;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    input[type="checkbox"]:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 10px;
+        background-color: #20b2aa;
+        position: absolute;
+        border-radius: 10px;
+        position: absolute;
+    }
+
+    input[type="checkbox"]:after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: #eee;
+        border-radius: 50%;
+        position: absolute;
+        box-sizing: border-box;
+        top: 1px;
+        left: 1px;
+        transition: all 0.3s ease;
+    }
+
+    input[type="checkbox"]:checked:before {
+        display: block;
+        width: 20px;
+        height: 10px;
+        border-radius: 10px;
+        position: absolute;
+        background-color: #66ccff;
+        box-sizing: border-box;
+    }
+
+    input[type="checkbox"]:checked:after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        left: 19px;
+        background-color: #fff;
+        box-sizing: border-box;
+    }
 }
 </style>
