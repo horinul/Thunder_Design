@@ -1,7 +1,24 @@
 <template>
   <div class="component">
     <div>
-      <THSwitch></THSwitch>
+      <THLoading></THLoading>
+      <THLoading type="balls"></THLoading>
+      <THLoading type="cylon"></THLoading>
+    </div>
+    <div>
+      <THSwitch
+        disabledText="dd的"
+        checkedText="bbb的"
+        size="little"
+      ></THSwitch>
+      <THSwitch disabledText="dd的" checkedText="bbb的"></THSwitch>
+      <THSwitch disabledText="dd的" checkedText="bbb的" size="large"></THSwitch>
+      <THSwitch
+        disabledText="dd的"
+        checkedText="bbb的"
+        size="increase"
+        :disabled="true"
+      ></THSwitch>
     </div>
     <div>
       <THTag>tagtag</THTag>
@@ -108,6 +125,7 @@ import THTooptip from "../../packages/Tooltip/src/index";
 import THTag from "../../packages/Tag/src/index";
 // import THSelect from "../../packages/Select/src/index";
 import THSwitch from "../../packages/Switch/src/index";
+import THLoading from "../../packages/Loading/src/index"
 
 export default {
   name: "HelloWorld",
@@ -126,7 +144,8 @@ export default {
     THTooptip,
     THTag,
     // THSelect,
-    THSwitch
+    THSwitch,
+    THLoading
   },
   data() {
     return {

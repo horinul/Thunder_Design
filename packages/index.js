@@ -13,6 +13,7 @@ import THTooltip from "./Tooltip";
 import THTag from './Tag';
 import THSelect from './Select'
 import THSwitch from './THSwitch'
+import THLoading from './THLoading'
 export default {
   install(Vue) {
     Vue.use(THButton);
@@ -29,5 +30,6 @@ export default {
     Vus.use(THTag);
     Vue.use(THSelect);
     Vue.use(THSwitch);
+    Vue.use(THLoading);
   },
 };
