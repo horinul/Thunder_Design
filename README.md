@@ -1,24 +1,26 @@
 # thunder-design
 
-## Project setup
+## what？
+二次元UI框架
+目前为“初音”版本
+
+### development
+clone it!
 ```
 npm install
 ```
+then 
+```
+npm run dev
+```
+and then you can test it 
 
-### Compiles and hot-reloads for development
+### install
 ```
-npm run serve
+npm install thunder_design --save
 ```
-
-### Compiles and minifies for production
+code it in main.js
 ```
-npm run build
+import thunder_design from "thunder_design"
+Vue.use(thunder_design)
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

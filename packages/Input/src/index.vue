@@ -169,6 +169,7 @@ export default {
 <style lang="less" scoped>
 .component {
   padding: 5px;
+  position: relative;
 }
 input,
 textarea {

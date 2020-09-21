@@ -8,12 +8,12 @@ import THCheckbox from "./Checkbox";
 import THCheckboxGroup from './Checkbox'
 import THMessage from './Message'
 import THBackTop from './BackTop'
-import Tooltip from './Tooltip'
 import THTooltip from "./Tooltip";
 import THTag from './Tag';
 import THSelect from './Select'
-import THSwitch from './THSwitch'
-import THLoading from './THLoading'
+// import THSwitch from './Switch'
+import THLoading from './Loading'
+
 export default {
   install(Vue) {
     Vue.use(THButton);
@@ -27,9 +27,9 @@ export default {
     Vue.use(THMessage);
     Vue.use(THBackTop);
     Vue.use(THTooltip);
-    Vus.use(THTag);
+    Vue.use(THTag);
     Vue.use(THSelect);
-    Vue.use(THSwitch);
+    // Vue.use(THSwitch);
     Vue.use(THLoading);
   },
 };

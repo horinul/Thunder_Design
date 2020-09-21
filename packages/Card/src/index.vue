@@ -106,6 +106,7 @@ export default {
 }
 
 .cardBody {
+    white-space:pre;
     min-height: 100px;
     line-height: 20px;
     padding: 12px 2px;

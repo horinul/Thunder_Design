@@ -1,6 +1,6 @@
 {
   "name": "thunder-designs",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "private": false,
   "keyword": "none test",
   "description": "UI Test",
@@ -9,7 +9,7 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name tree-select --dest  lib packages/index.ts"
+    "lib": "vue-cli-service build --target lib --name thunder-designs --dest  lib packages/index.js"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
@@ -55,5 +55,5 @@
     "last 2 versions",
     "not dead"
   ],
-  "main": "lib/tree-select.umd.min.js"
+  "main": "lib/index"
 }

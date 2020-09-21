@@ -15,13 +15,13 @@ export default {
     pushItem(value) {
       this.checkBoxGroup.push(value);
       this.$emit("input", this.checkBoxGroup);
-      console.log(this.checkBoxGroup);
+      // console.log(this.checkBoxGroup);
     },
     removeItem(value) {
       const index = this.checkBoxGroup.indexOf(value);
       this.checkBoxGroup.splice(index, 1);
       this.$emit("input", this.checkBoxGroup);
-      console.log(this.checkBoxGroup);
+      // console.log(this.checkBoxGroup);
     },
   },
   mounted() {

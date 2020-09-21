@@ -32,11 +32,11 @@
       <THTag color="blue" :borderShow="true">tagtag</THTag>
     </div>
     <div>
-      <THTooptip popperText="hdkjasnjdsan" placement="right">aaa</THTooptip>
-      <THTooptip popperText="hdkjasnjdsan" placement="top">aaa</THTooptip>
-      <THTooptip placement="bottom" popperText="hdkjasnjdsan">
+      <THTooltip popperText="hdkjasnjdsan" placement="right">aaa</THTooltip>
+      <THTooltip popperText="hdkjasnjdsan" placement="top">aaa</THTooltip>
+      <THTooltip placement="bottom" popperText="hdkjasnjdsan">
         <THButton icon="icon1" @click="test">testMessage</THButton>
-      </THTooptip>
+      </THTooltip>
     </div>
     <!-- <div>
       <THBackTop icon="icon6"></THBackTop>
@@ -48,11 +48,11 @@
       <THButton icon="icon6" @click="testSuccess">testMessage</THButton>
     </div>
     <div>
-      <THCheckboxGroup v-model="checkbox" @click="checkboxMethod">
-        <THCheckbox value="aaa">aaa</THCheckbox>
-        <THCheckbox value="bbb">bbb</THCheckbox>
-        <THCheckbox value="ccc">ccc</THCheckbox>
-      </THCheckboxGroup>
+        <THCheckboxGroup v-model="checkbox" @click="checkboxMethod">
+          <THCheckbox value="aaa">aaa</THCheckbox>
+          <THCheckbox value="bbb">bbb</THCheckbox>
+          <THCheckbox value="ccc">ccc</THCheckbox>
+        </THCheckboxGroup>
     </div>
     <div>
       <THAlert type="blue" :showCancel="true">三年二班</THAlert>
@@ -61,7 +61,7 @@
       <THAlert icon="icon9" size="large">李子明同学</THAlert>
     </div>
     <div>
-      <THButton @click="modalMethod">testModal</THButton>
+      <THButton @click="modaklMethod">testModal</THButton>
       <THModal
         :isActiveProp.sync="testModal"
         title="测试标题"
@@ -82,7 +82,7 @@
       <THButton size="increase" icon="icon1">dajkdlslakdkas</THButton>
     </div>
     <div>
-      <THIcon icon="icon8" size="increase"></THIcon>
+        <THIcon icon="icon8" size="increase"></THIcon>
     </div>
     <div>
       <THInput maxlength="8" type="textarea"></THInput>
@@ -121,7 +121,7 @@ import THButton from "../../packages/Button/index";
 // // THMessage直接引用无效，必须在整个项目的main.js中引入并Vue.use
 // // import THMessage from "../../packages/Message/index";
 // import THBackTop from "../../packages/BackTop/src/index"
-import THTooptip from "../../packages/Tooltip/src/index";
+import THTooltip from "../../packages/Tooltip/src/index";
 import THTag from "../../packages/Tag/src/index";
 // import THSelect from "../../packages/Select/src/index";
 import THSwitch from "../../packages/Switch/src/index";
@@ -141,7 +141,7 @@ export default {
     // THCheckboxGroup,
     // // THMessage,
     // THBackTop,
-    THTooptip,
+    THTooltip,
     THTag,
     // THSelect,
     THSwitch,

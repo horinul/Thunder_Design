@@ -28,11 +28,8 @@ export default {
       default: "default",
     },
     disabled: {
-      validator: (value) => {
-        return oneOf(value, ["false", "true"]);
-      },
-      type: String,
-      default: "false",
+      type: Boolean,
+      default: false,
     },
     icon: {
       type: String,
@@ -49,7 +46,7 @@ export default {
         "buttonBase",
         "type-" + this.type,
         "size-" + this.size,
-        this.disabled === "true" ? "buttonDisabled" : null,
+        this.disabled ? "buttonDisabled" : null,
       ];
     },
     textStyle() {
@@ -70,7 +67,7 @@ export default {
   },
   methods: {
     buttonClick(event) {
-      this.disabled === "true" ? null : this.$emit("click", event);
+      this.disabled ? null : this.$emit("click", event);
     },
   },
 };
@@ -97,7 +94,7 @@ export default {
   margin-left: 30px;
 }
 .buttonDisabled {
-  background-color: #4169e1;
+  background-color: #778899	;
   cursor: not-allowed;
 }
 .size-default {

@@ -73,6 +73,20 @@ const buildConfig = {
             .tap(options => {
                 return options
             })
+        config.optimization.delete('splitChunks')
+        config.plugins.delete('copy')
+        config.plugins.delete('html')
+        config.plugins.delete('preload')
+        config.plugins.delete('prefetch')
+        config.plugins.delete('hmr')
+        config.entryPoints.delete('app')
+        config.module
+        .rule('fonts')
+        .use('url-loader')
+        .tap(option => {
+            option.fallback.options.name = 'static/fonts/[name].[hash:8].[ext]'
+            return option
+        })
     },
     outputDir: 'lib',
     productionSourceMap: false,
@@ -91,23 +105,11 @@ const buildConfig = {
             filename: 'style/[name].css' //在lib文件夹中建立style文件夹中，生成对应的css文件。
         }
     },
-    chainWebpack: config => {
-        config.optimization.delete('splitChunks')
-        config.plugins.delete('copy')
-        config.plugins.delete('html')
-        config.plugins.delete('preload')
-        config.plugins.delete('prefetch')
-        config.plugins.delete('hmr')
-        config.entryPoints.delete('app')
-    },
-    chainWebpack: config => {
-        config.module
-            .rule('fonts')
-            .use('url-loader')
-            .tap(option => {
-                option.fallback.options.name = 'static/fonts/[name].[hash:8].[ext]'
-                return option
-            })
-    },
+    // chainWebpack: config => {
+
+    // },
+    // chainWebpack: config => {
+      
+    // },
 }
 module.exports = process.env.NODE_ENV === 'development' ? devConfig : buildConfig;

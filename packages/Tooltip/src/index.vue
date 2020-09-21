@@ -1,7 +1,9 @@
 <template>
 <popper :trigger="trigger" :options="{
       placement: placement,
-      modifiers: { offset: { offset: offset } },
+      modifiers: { offset: { offset: offset },
+       gpuAcceleration: false,
+          adaptive: false, },
     }" content="bbb" :visible-arrow="visibleArrow" :disabled="disabled" class="component">
     <div class="popper">
         {{ popperText }}
@@ -26,9 +28,9 @@ export default {
         placement: {
             type: String,
             validator: (value) => {
-                return oneOf(value, ["left", "right", "top", "bottom"]);
+                return oneOf(value, ["left", "right", "top", "bottom","left-start", "right-start", "top-start", "bottom-start","left-end", "right-end", "top-end", "bottom-end"]);
             },
-            default: "left",
+            // default: "left",
         },
         offset: {
             default: "0,0",
@@ -56,10 +58,6 @@ export default {
         visibleArrow: {
             type: Boolean,
             default: true,
-        },
-        icon: {
-            type: String,
-            default: "icon5",
         },
     },
 };

@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+// thanks for https://github.com/jkchao/vue-loading
 import { VueLoading } from "vue-loading-template";
 import { oneOf } from "../../../src/utils/index";
 export default {

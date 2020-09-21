@@ -40,7 +40,7 @@ THMessage.install = function (Vue) {
             instance.type = type;
             instance.distanceFromTop = distanceFromTop
         },
-        success(msg, duration = 200000, distanceFromTop = 30) {
+        success(msg, duration = 2000, distanceFromTop = 30) {
             this.all_message(msg, 'success', duration, distanceFromTop);
         },
         error(msg, duration = 2000, distanceFromTop = 30) {

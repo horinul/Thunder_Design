@@ -11,13 +11,6 @@ import {
 export default {
     name: "THIcon",
     props: {
-        type: {
-            validator: (value) => {
-                return oneOf(value, ["default", "circle"]);
-            },
-            type: String,
-            default: "default",
-        },
         size: {
             validator: (value) => {
                 return oneOf(value, ["default", "little", "large", "increase"]);
