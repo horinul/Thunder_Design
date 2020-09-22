@@ -65,6 +65,7 @@ export default {
   align-items: center;
   font-size: 10px;
   input[type="checkbox"] {
+    cursor: pointer;
     width: 26px;
     height: 14px;
     background-color: transparent;

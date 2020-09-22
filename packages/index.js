@@ -10,8 +10,7 @@ import THMessage from './Message'
 import THBackTop from './BackTop'
 import THTooltip from "./Tooltip";
 import THTag from './Tag';
-import THSelect from './Select'
-// import THSwitch from './Switch'
+import THSwitch from './Switch'
 import THLoading from './Loading'
 
 export default {
@@ -28,8 +27,7 @@ export default {
     Vue.use(THBackTop);
     Vue.use(THTooltip);
     Vue.use(THTag);
-    Vue.use(THSelect);
-    // Vue.use(THSwitch);
+    Vue.use(THSwitch);
     Vue.use(THLoading);
   },
 };

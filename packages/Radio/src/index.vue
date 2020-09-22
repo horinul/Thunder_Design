@@ -17,6 +17,7 @@ import {
     oneOf
 } from "../../../src/utils/index";
 export default {
+    name:'THRadio',
     props: {
         // id应是始终唯一的
         id: {
@@ -34,10 +35,6 @@ export default {
             type: String,
             default: "green",
         },
-        icon: {
-            type: Boolean,
-            default: true,
-        },
         disabled: {
             type: Boolean,
             default: false,
@@ -50,9 +47,6 @@ export default {
     computed: {
         textStyle() {
             return ["text-" + this.type, "radioText"];
-        },
-        iconStyle() {
-            return ["addIcon"];
         },
         spot() {
             return ["spot-" + this.type];
@@ -90,7 +84,7 @@ label input {
     display: inline-block;
     width: 30px;
     height: 30px;
-    background: url("../static/bac1.png") no-repeat;
+    background: url("https://pic.downk.cc/item/5f69e574160a154a674cb71d.jpg") no-repeat;
     /*默认的样式图片*/
     background-size: 30px;
     position: absolute;
@@ -103,7 +97,7 @@ label input {
 
 input:checked+.spot-green {
     /*选中后的样式*/
-    background: url("../static/bac1.png") no-repeat;
+    background: url("https://pic.downk.cc/item/5f69e574160a154a674cb71d.jpg") no-repeat;
     background-size: 30px;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(62, 190, 211, 0.4);
@@ -113,7 +107,7 @@ input:checked+.spot-green {
 }
 
 input:checked+.spot-blue {
-    background: url("../static/bac1.png") no-repeat;
+    background: url("https://pic.downk.cc/item/5f69e574160a154a674cb71d.jpg") no-repeat;
     background-size: 30px;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(57, 197, 187, 0.4);

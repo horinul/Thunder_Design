@@ -70,12 +70,12 @@
         icon="icon8"
         >dbajshbdjsahbhdsb</THModal
       >
-    </div>
+    </div>-->
     <div>
       <THRadio value="test" id="test" name="test" @click="test">aaa</THRadio>
       <THRadio type="blue" value="aaa" id="test1" name="test">aaa</THRadio>
     </div>
-    <div>
+    <!--<div>
       <THButton icon="icon1" disabled="true" @click="test">dhakj</THButton>
       <THButton size="little" icon="icon1" @click="test">dhakj</THButton>
       <THButton size="large" icon="icon1">dajkdlslakdkas</THButton>
@@ -113,7 +113,7 @@ import THButton from "../../packages/Button/index";
 // import THIcon from "../../packages/Icon/index";
 // import THInput from "../../packages/Input/index";
 // import THCard from "../../packages/Card/index";
-// import THRadio from "../../packages/Radio/index";
+import THRadio from "../../packages/Radio/index";
 // import THModal from "../../packages/Modal/index";
 // import THAlert from "../../packages/Alert/index";
 // import THCheckbox from "../../packages/Checkbox/index";
@@ -134,7 +134,7 @@ export default {
     // THIcon,
     // THInput,
     // THCard,
-    // THRadio,
+    THRadio,
     // THModal,
     // THAlert,
     // THCheckbox,

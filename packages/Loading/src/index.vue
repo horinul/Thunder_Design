@@ -43,7 +43,7 @@ export default {
   display: inline-block;
   width: 70px;
   height: 70px;
-  background-image: url("../static/loading1.png");
+  background-image: url("https://pic.downk.cc/item/5f69e52c160a154a674c956b.png");
   background-size: cover;
   position: relative;
 }
@@ -51,7 +51,7 @@ export default {
   display: inline-block;
   width: 80px;
   height: 60px;
-  background-image: url("../static/loading2.png");
+  background-image: url("https://pic.downk.cc/item/5f69e52c160a154a674c9571.jpg");
   background-size: cover;
   position: relative;
   margin-top: 20px;
@@ -60,7 +60,7 @@ export default {
   display: inline-block;
   width: 70px;
   height: 70px;
-  background-image: url("../static/loading3.png");
+  background-image: url("https://pic.downk.cc/item/5f69e52c160a154a674c9576.png");
   background-size: cover;
   position: relative;
   margin-top: 10px;

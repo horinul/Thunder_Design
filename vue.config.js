@@ -81,12 +81,12 @@ const buildConfig = {
         config.plugins.delete('hmr')
         config.entryPoints.delete('app')
         config.module
-        .rule('fonts')
-        .use('url-loader')
-        .tap(option => {
-            option.fallback.options.name = 'static/fonts/[name].[hash:8].[ext]'
-            return option
-        })
+            .rule('fonts')
+            .use('url-loader')
+            .tap(option => {
+                option.fallback.options.name = 'static/fonts/[name].[hash:8].[ext]'
+                return option
+            })
     },
     outputDir: 'lib',
     productionSourceMap: false,
@@ -101,15 +101,19 @@ const buildConfig = {
     },
     css: {
         sourceMap: true,
-        extract: {
-            filename: 'style/[name].css' //在lib文件夹中建立style文件夹中，生成对应的css文件。
-        }
+        extract: false,
+        loaderOptions: {
+            // 给 sass-loader 传递选项
+            less: {
+                data: `@import "src/css/index.less";`
+            }
+        },
     },
     // chainWebpack: config => {
 
     // },
     // chainWebpack: config => {
-      
+
     // },
 }
 module.exports = process.env.NODE_ENV === 'development' ? devConfig : buildConfig;

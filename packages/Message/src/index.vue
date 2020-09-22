@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "messages",
+  // name: "messages",
   data() {
     return {
       showMessage: false,
@@ -96,19 +96,19 @@ export default {
 }
 
 .icon-type-success {
-  background-image: url("../static/success.png");
+  background-image: url("https://pic.downk.cc/item/5f69e61f160a154a674d347f.png");
 }
 
 .icon-type-error {
-  background-image: url("../static/error.png");
+  background-image: url("https://pic.downk.cc/item/5f69e61f160a154a674d346c.png");
 }
 
 .icon-type-warn {
-  background-image: url("../static/warn.png");
+  background-image: url("https://pic.downk.cc/item/5f69e628160a154a674d3990.png");
 }
 
 .icon-type-message {
-  background-image: url("../static/message.png");
+  background-image: url("https://pic.downk.cc/item/5f69e61f160a154a674d3473.png");
 }
 
 .defaultText {
@@ -129,15 +129,15 @@ export default {
   right: 10px;
 }
 .font-type-message {
-  background-image: url("../static/messageIcon.png");
+  background-image: url("https://pic.downk.cc/item/5f69e61f160a154a674d3479.png");
 }
 .font-type-success {
-  background-image: url("../static/successIcon.png");
+  background-image: url("https://pic.downk.cc/item/5f69e628160a154a674d398e.png");
 }
 .font-type-error {
-  background-image: url("../static/errorIcon.png");
+  background-image: url("https://pic.downk.cc/item/5f69e61f160a154a674d3470.png");
 }
 .font-type-warn {
-  background-image: url("../static/warnIcon.png");
+  background-image: url("https://pic.downk.cc/item/5f69e628160a154a674d3996.png");
 }
 </style>

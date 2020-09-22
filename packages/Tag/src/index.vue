@@ -162,7 +162,7 @@ export default {
 }
 
 .closeDefault {
-  background-image: url("../static/close.png");
+  background-image: url("https://pic.downk.cc/item/5f69e692160a154a674d7876.png");
   background-size: cover;
   display: inline-block;
   height: 10px;
@@ -173,18 +173,18 @@ export default {
 }
 
 .close-borderShow {
-  background-image: url("../static/closeGreen.png");
+  background-image: url("https://pic.downk.cc/item/5f69e692160a154a674d787e.png");
 }
 
 .close-borderShow-blue {
-  background-image: url("../static/closeBlue.png");
+  background-image: url("https://pic.downk.cc/item/5f69e692160a154a674d7878.png");
 }
 
 .close-borderShow-yellow {
-  background-image: url("../static/closeYellow.png");
+  background-image: url("https://pic.downk.cc/item/5f69e692160a154a674d7883.png");
 }
 
 .close-borderShow-red {
-  background-image: url("../static/closeRed.png");
+  background-image: url("https://pic.downk.cc/item/5f69e692160a154a674d7880.png");
 }
 </style>

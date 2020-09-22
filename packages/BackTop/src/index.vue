@@ -89,7 +89,7 @@ export default {
   margin-top: 3px;
 }
 .arrowTop {
-  background-image: url("../static/arrowTop.png");
+  background-image: url("https://pic.downk.cc/item/5f69e5eb160a154a674d1b7d.png");
   background-size: cover;
   display: inline-block;
   width: 30px;

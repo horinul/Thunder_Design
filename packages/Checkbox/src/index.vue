@@ -75,7 +75,7 @@ input[type="checkbox"]::before {
   position: absolute;
   top: -1px;
   left: -1px;
-  background: url("../static/bac1.png");
+  background: url("https://pic.downk.cc/item/5f69e574160a154a674cb71d.jpg");
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -84,7 +84,7 @@ input[type="checkbox"]::before {
 }
 
 input[type="checkbox"]:checked::before {
-  background: url("../static/bac1.png");
+  background: url("https://pic.downk.cc/item/5f69e574160a154a674cb71d.jpg");
   background-size: cover;
   box-shadow: 0px 0px 10px rgba(62, 190, 211, 0.4);
   /*考虑浏览器兼容性*/

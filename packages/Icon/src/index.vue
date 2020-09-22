@@ -5,6 +5,18 @@
 </template>
 
 <script>
+const imgUrlArray=[
+    'https://pic.downk.cc/item/5f69e27a160a154a674b6b9a.png',
+    'https://pic.downk.cc/item/5f69e27a160a154a674b6b9d.png',
+    'https://pic.downk.cc/item/5f69e27a160a154a674b6ba0.png',
+    'https://pic.downk.cc/item/5f69e2bf160a154a674b8eeb.png',
+    'https://pic.downk.cc/item/5f69e2bf160a154a674b8eed.png',
+    'https://pic.downk.cc/item/5f69e2bf160a154a674b8ef0.png',
+    'https://pic.downk.cc/item/5f69e2bf160a154a674b8efa.png',
+    'https://pic.downk.cc/item/5f69e2bf160a154a674b8eed.png',
+    'https://pic.downk.cc/item/5f69e2df160a154a674ba095.png',
+    'https://pic.downk.cc/item/5f69e2df160a154a674ba098.png'
+]
 import {
     oneOf
 } from "../../../src/utils/index";
@@ -38,8 +50,10 @@ export default {
         },
     },
     data() {
+        // https://raw.githubusercontent.com/frotage/Thunder_Design/master/packages/Icon/static/icon1.png?token=AMUMPO7YZMFBLS2JGIPNTQ27NHQPQ
+        var  imgUrlNum=Number(this.icon.split('icon')[1])
         return {
-            imgSrc: this.icon ? require("../static/" + this.icon + ".png") : null,
+            imgSrc: this.icon ?imgUrlArray[imgUrlNum-1] : null,
         };
     },
     computed: {

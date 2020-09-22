@@ -21,6 +21,7 @@ import {
     oneOf
 } from "../../../src/utils/index";
 export default {
+    name:"THTooltip",
     components: {
         popper: Popper,
     },
