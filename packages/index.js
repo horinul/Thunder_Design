@@ -12,6 +12,7 @@ import THTooltip from "./Tooltip";
 import THTag from './Tag';
 import THSwitch from './Switch'
 import THLoading from './Loading'
+import THAlert from './Alert'
 
 export default {
   install(Vue) {
@@ -29,5 +30,6 @@ export default {
     Vue.use(THTag);
     Vue.use(THSwitch);
     Vue.use(THLoading);
+    Vue.use(THAlert);
   },
 };

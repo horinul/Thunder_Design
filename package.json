@@ -1,6 +1,6 @@
 {
   "name": "thunder-design",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "keyword": "二次元 UI design component",
   "description": "二次元UI框架",
@@ -9,7 +9,7 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name thunder-designs --dest  lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name thunder-design --dest  lib packages/index.js"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
