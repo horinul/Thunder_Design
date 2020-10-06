@@ -83,20 +83,20 @@
     </div>
     <div>
         <THIcon icon="icon8" size="increase"></THIcon>
-    </div>
+    </div>-->
     <div>
       <THInput maxlength="8" type="textarea"></THInput>
       <THInput type="text" icon="icon6" @keyup.enter="test"></THInput>
-      <THInput type="text" icon="icon7" size="large" autofocus></THInput>
+      <THInput type="tel" icon="icon7" size="large" autofocus></THInput>
       <THInput
         type="text"
         icon="icon8"
         size="little"
         :disabled="true"
       ></THInput>
-      <THInput type="text" icon="icon9" size="increase"></THInput>
+      <THInput type="password" icon="icon9" size="increase"></THInput>
     </div>
-    <div>
+    <!-- <div>
       <THCard>
         <div slot="title">9.13</div>
         <div slot="body">今天天气不错</div>
@@ -111,7 +111,7 @@
 <script>
 import THButton from "../../packages/Button/index";
 // import THIcon from "../../packages/Icon/index";
-// import THInput from "../../packages/Input/index";
+import THInput from "../../packages/Input/index";
 // import THCard from "../../packages/Card/index";
 import THRadio from "../../packages/Radio/index";
 // import THModal from "../../packages/Modal/index";
@@ -125,14 +125,14 @@ import THTooltip from "../../packages/Tooltip/src/index";
 import THTag from "../../packages/Tag/src/index";
 // import THSelect from "../../packages/Select/src/index";
 import THSwitch from "../../packages/Switch/src/index";
-import THLoading from "../../packages/Loading/src/index"
+import THLoading from "../../packages/Loading/src/index";
 
 export default {
   name: "HelloWorld",
   components: {
     THButton,
     // THIcon,
-    // THInput,
+    THInput,
     // THCard,
     THRadio,
     // THModal,
@@ -145,7 +145,7 @@ export default {
     THTag,
     // THSelect,
     THSwitch,
-    THLoading
+    THLoading,
   },
   data() {
     return {

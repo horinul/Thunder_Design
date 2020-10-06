@@ -8,6 +8,7 @@
         :size="iconSize"
       ></THIcon>
       <input
+        v-model="inputText"
         :type="type"
         :size="size"
         :value="value"
@@ -65,7 +66,6 @@ export default {
           "textarea",
           "tel",
           "password",
-          "email",
           "number",
         ]);
       },
@@ -134,12 +134,13 @@ export default {
       isTextarea: this.type === "textarea",
       isAddIcon: this.icon,
       iconSize: this.size,
+      inputText: "",
     };
   },
   computed: {
     textStyle() {
       return [
-        this.icon ? "inputAddIcon-"+this.size : null,
+        this.icon ? "inputAddIcon-" + this.size : null,
         this.size ? this.size + "-size-input" : null,
       ];
     },
@@ -159,6 +160,11 @@ export default {
     },
     handleInput(event) {
       this.$emit("input", event);
+      if (this.type === "tel") {
+        this.inputText = this.inputText
+          ? this.inputText.replace(/[^0-9]/g, "")
+          : this.inputText;
+      }
     },
     handleEnter(event) {
       this.$emit("keyup", event);
