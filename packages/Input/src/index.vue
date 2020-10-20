@@ -199,24 +199,24 @@ textarea::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #48d1cc;
 }
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #483d8b;
-}
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #483d8b;
-}
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #483d8b;
-}
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #483d8b;
-}
+// :-moz-placeholder {
+//   /* Mozilla Firefox 4 to 18 */
+//   color: #483d8b;
+// }
+// ::-moz-placeholder {
+//   /* Mozilla Firefox 19+ */
+//   color: #483d8b;
+// }
+// input:-ms-input-placeholder,
+// textarea:-ms-input-placeholder {
+//   /* Internet Explorer 10-11 */
+//   color: #483d8b;
+// }
+// input::-ms-input-placeholder,
+// textarea::-ms-input-placeholder {
+//   /* Microsoft Edge */
+//   color: #483d8b;
+// }
 .inputIcon-default {
   position: absolute;
   z-index: 500;

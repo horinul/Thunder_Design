@@ -13,6 +13,7 @@ import THTag from './Tag';
 import THSwitch from './Switch'
 import THLoading from './Loading'
 import THAlert from './Alert'
+import THIdentify from './Identify'
 
 export default {
   install(Vue) {
@@ -31,5 +32,6 @@ export default {
     Vue.use(THSwitch);
     Vue.use(THLoading);
     Vue.use(THAlert);
+    Vue.use(THIdentify);
   },
 };

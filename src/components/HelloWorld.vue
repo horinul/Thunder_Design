@@ -1,6 +1,12 @@
 <template>
   <div class="component">
     <div>
+      <THIdentify size="little"></THIdentify>
+      <THIdentify></THIdentify>
+      <THIdentify size="large"></THIdentify>
+      <THIdentify color="green"></THIdentify>
+    </div>
+    <!--  <div>
       <THLoading></THLoading>
       <THLoading type="balls"></THLoading>
       <THLoading type="cylon"></THLoading>
@@ -38,7 +44,7 @@
         <THButton icon="icon1" @click="test">testMessage</THButton>
       </THTooltip>
     </div>
-    <!-- <div>
+    <div>
       <THBackTop icon="icon6"></THBackTop>
     </div>
     <div>
@@ -70,12 +76,12 @@
         icon="icon8"
         >dbajshbdjsahbhdsb</THModal
       >
-    </div>-->
+    </div>
     <div>
       <THRadio value="test" id="test" name="test" @click="test">aaa</THRadio>
       <THRadio type="blue" value="aaa" id="test1" name="test">aaa</THRadio>
     </div>
-    <!--<div>
+    <div>
       <THButton icon="icon1" disabled="true" @click="test">dhakj</THButton>
       <THButton size="little" icon="icon1" @click="test">dhakj</THButton>
       <THButton size="large" icon="icon1">dajkdlslakdkas</THButton>
@@ -83,7 +89,7 @@
     </div>
     <div>
         <THIcon icon="icon8" size="increase"></THIcon>
-    </div>-->
+    </div>
     <div>
       <THInput maxlength="8" type="textarea"></THInput>
       <THInput type="text" icon="icon6" @keyup.enter="test"></THInput>
@@ -96,7 +102,7 @@
       ></THInput>
       <THInput type="password" icon="icon9" size="increase"></THInput>
     </div>
-    <!-- <div>
+     <div>
       <THCard>
         <div slot="title">9.13</div>
         <div slot="body">今天天气不错</div>
@@ -109,11 +115,11 @@
 </template>
 
 <script>
-import THButton from "../../packages/Button/index";
+// import THButton from "../../packages/Button/index";
 // import THIcon from "../../packages/Icon/index";
-import THInput from "../../packages/Input/index";
+// import THInput from "../../packages/Input/index";
 // import THCard from "../../packages/Card/index";
-import THRadio from "../../packages/Radio/index";
+// import THRadio from "../../packages/Radio/index";
 // import THModal from "../../packages/Modal/index";
 // import THAlert from "../../packages/Alert/index";
 // import THCheckbox from "../../packages/Checkbox/index";
@@ -121,31 +127,32 @@ import THRadio from "../../packages/Radio/index";
 // // THMessage直接引用无效，必须在整个项目的main.js中引入并Vue.use
 // // import THMessage from "../../packages/Message/index";
 // import THBackTop from "../../packages/BackTop/src/index"
-import THTooltip from "../../packages/Tooltip/src/index";
-import THTag from "../../packages/Tag/src/index";
+// import THTooltip from "../../packages/Tooltip/src/index";
+// import THTag from "../../packages/Tag/src/index";
 // import THSelect from "../../packages/Select/src/index";
-import THSwitch from "../../packages/Switch/src/index";
-import THLoading from "../../packages/Loading/src/index";
-
+// import THSwitch from "../../packages/Switch/src/index";
+// import THLoading from "../../packages/Loading/src/index";
+import THIdentify from "../../packages/Identify/src/index";
 export default {
   name: "HelloWorld",
   components: {
-    THButton,
+    THIdentify,
+    // THButton,
     // THIcon,
-    THInput,
+    // THInput,
     // THCard,
-    THRadio,
+    // THRadio,
     // THModal,
     // THAlert,
     // THCheckbox,
     // THCheckboxGroup,
     // // THMessage,
     // THBackTop,
-    THTooltip,
-    THTag,
+    // THTooltip,
+    // THTag,
     // THSelect,
-    THSwitch,
-    THLoading,
+    // THSwitch,
+    // THLoading,
   },
   data() {
     return {
