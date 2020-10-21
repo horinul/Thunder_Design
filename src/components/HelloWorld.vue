@@ -2,7 +2,15 @@
   <div class="">
     <div>
       <THIdentify size="little"></THIdentify>
-      <THIdentify @success="identify" @error="test"></THIdentify>
+      <div @click="testMsg">14555</div>
+      <THIdentify
+        @success="identify"
+        @error="test"
+        text="注册"
+        ref="identifyCheckButton"
+      >
+        <button id="test">test</button>
+      </THIdentify>
       <THIdentify size="large"></THIdentify>
       <THIdentify color="green"></THIdentify>
     </div>
@@ -172,6 +180,7 @@ export default {
     test() {
       console.log("test");
     },
+    identi() {},
     modalMethod() {
       this.testModal = true;
     },
@@ -179,7 +188,7 @@ export default {
       console.log(this.checkbox);
     },
     testMsg() {
-      this.$message.message("test");
+      this.$thMessage.message("test");
     },
     testWarn() {
       this.$message.warn("test");

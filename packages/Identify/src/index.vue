@@ -13,7 +13,14 @@
         v-model="checkCode"
         :class="identifyShowStyle"
       />
-      <button :class="identifyClickStyle" @click="clickToIdentify">确定</button>
+
+      <span @click="clickToIdentify" v-show="show">
+        <slot>
+          <button :class="identifyClickStyle">
+            {{ text }}
+          </button></slot
+        >
+      </span>
     </div>
   </div>
 </template>
@@ -21,7 +28,7 @@
 <script>
 import { oneOf } from "../../../src/utils/index";
 export default {
-  name:'THIdentify',
+  name: "THIdentify",
   data() {
     return {
       code: "",
@@ -51,10 +58,13 @@ export default {
       type: String,
       default: "验证码",
     },
-    clickButton: {
-      // 传入的是ref的值
+    text: {
       type: String,
       default: "确定",
+    },
+    show: {
+      type: Boolean,
+      default: true,
     },
   },
   computed: {
@@ -81,6 +91,7 @@ export default {
       if (this.identifyInput === this.checkCode) {
         this.$emit("success");
       } else {
+        console.log("false");
         this.$emit("error");
         this.createCode();
       }
@@ -146,9 +157,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.component {
-  margin: 10px;
-}
 .defaultInput {
   outline: 0;
   font-weight: 600;

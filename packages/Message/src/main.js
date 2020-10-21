@@ -54,7 +54,7 @@ THMessage.install = function (Vue) {
         }
     }
     //将方法挂载全局
-    Vue.prototype.$message = message_main;
+    Vue.prototype.$thMessage = message_main;
 }
 
 export default THMessage
