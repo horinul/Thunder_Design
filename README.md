@@ -21,6 +21,6 @@ npm install thunder-design --save
 ```
 code it in main.js
 ```
-import thunder from "thunder_design"
+import thunder from "thunder-design"
 Vue.use(thunder)
 ```

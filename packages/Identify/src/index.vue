@@ -21,6 +21,7 @@
 <script>
 import { oneOf } from "../../../src/utils/index";
 export default {
+  name:'THIdentify',
   data() {
     return {
       code: "",
