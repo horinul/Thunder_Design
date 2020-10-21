@@ -17,7 +17,7 @@ npm run dev
 
 ### install
 ```
-npm install thunder_design --save
+npm install thunder-design --save
 ```
 code it in main.js
 ```
