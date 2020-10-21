@@ -78,9 +78,10 @@ export default {
   methods: {
     clickToIdentify() {
       if (this.identifyInput === this.checkCode) {
-        console.log("true");
+        this.$emit("success");
       } else {
-        console.log("false");
+        this.$emit("error");
+        this.createCode();
       }
     },
     // 图片验证码

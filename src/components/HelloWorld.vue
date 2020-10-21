@@ -1,8 +1,8 @@
 <template>
-  <div class="component">
+  <div class="">
     <div>
       <THIdentify size="little"></THIdentify>
-      <THIdentify></THIdentify>
+      <THIdentify @success="identify" @error="test"></THIdentify>
       <THIdentify size="large"></THIdentify>
       <THIdentify color="green"></THIdentify>
     </div>
@@ -166,6 +166,9 @@ export default {
     msg: String,
   },
   methods: {
+    identify() {
+      alert("aa");
+    },
     test() {
       console.log("test");
     },
