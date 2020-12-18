@@ -51,11 +51,11 @@
       <THTooltip placement="bottom" popperText="hdkjasnjdsan">
         <THButton icon="icon1" @click="test">testMessage</THButton>
       </THTooltip>
-    </div>
+    </div>-->
     <div>
       <THBackTop icon="icon6"></THBackTop>
     </div>
-    <div>
+    <!-- <div>
 
       <THButton icon="icon6" @click="testWarn">testMessage</THButton>
       <THButton icon="icon6" @click="testError">testMessage</THButton>
@@ -134,7 +134,7 @@
 // import THCheckboxGroup from "../../packages/Checkbox/src/checkboxGroup.vue";
 // // THMessage直接引用无效，必须在整个项目的main.js中引入并Vue.use
 // // import THMessage from "../../packages/Message/index";
-// import THBackTop from "../../packages/BackTop/src/index"
+import THBackTop from "../../packages/BackTop/src/index";
 // import THTooltip from "../../packages/Tooltip/src/index";
 // import THTag from "../../packages/Tag/src/index";
 // import THSelect from "../../packages/Select/src/index";
@@ -155,7 +155,7 @@ export default {
     // THCheckbox,
     // THCheckboxGroup,
     // // THMessage,
-    // THBackTop,
+    THBackTop,
     // THTooltip,
     // THTag,
     // THSelect,

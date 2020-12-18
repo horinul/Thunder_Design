@@ -5,7 +5,7 @@
     @click="handleClick"
     v-show="showBackTop"
   >
-    <div :class="iconStyle">
+    <div class="iconDefault">
       <div class="arrowTop"></div>
       <THIcon :icon="icon" size="little"></THIcon>
     </div>
@@ -39,11 +39,6 @@ export default {
       type: Number,
       default: 100,
     }
-  },
-  computed: {
-    iconStyle() {
-      return ["iconDefault", "icon-shape-" + this.shape];
-    },
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);

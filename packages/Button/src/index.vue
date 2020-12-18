@@ -35,11 +35,6 @@ export default {
       type: String,
     },
   },
-  data() {
-    return {
-      // imgSrc: require("../static/" + this.icon + ".png"),
-    };
-  },
   computed: {
     buttonStyle() {
       return [
