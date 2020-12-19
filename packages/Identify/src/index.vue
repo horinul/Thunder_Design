@@ -91,7 +91,6 @@ export default {
       if (this.identifyInput === this.checkCode) {
         this.$emit("success");
       } else {
-        console.log("false");
         this.$emit("error");
         this.createCode();
       }
@@ -101,7 +100,6 @@ export default {
       //先清空验证码的输入
       this.code = "";
       this.checkCode = "";
-      this.picLyanzhengma = "";
       //验证码的长度
       var codeLength = 4;
       //随机数
